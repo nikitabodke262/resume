@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita Bodke - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f8f8f8;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: 5px solid #00bcd4;
+            transition: background 0.3s ease-in-out;
+        }
+        ul li:hover {
+            background: #e0f7fa;
+        }
+        .toggle-content {
+            display: none;
+        }
+        .toggle-btn {
+            cursor: pointer;
+            color: #00bcd4;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function toggleSection(id) {
+            var section = document.getElementById(id);
+            if (section.style.display === "none" || section.style.display === "") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Nikita Bodke</h1>
+        <p><a href="#">LinkedIn</a> | +91 9623323755 | <a href="mailto:nikitabodke262@gmail.com">nikitabodke262@gmail.com</a> | <a href="#">GitHub</a></p>
+    </header>
+    <section>
+        <h2 class="toggle-btn" onclick="toggleSection('skills')">Skills ▼</h2>
+        <div id="skills" class="toggle-content">
+            <p>Java (Java 8), JavaScript, Oracle SQL, MySQL, React JS, Spring Boot, Spring MVC, Maven, HTML, CSS, CI/CD, JUnit, OOP, SonarQube, J2EE, Git, Jenkins, Postman, Swagger, AWS (Basics), Microservices, Frontend, Backend, Agile.</p>
+        </div>
+    </section>
+    <section>
+        <h2 class="toggle-btn" onclick="toggleSection('experience')">Experience ▼</h2>
+        <div id="experience" class="toggle-content">
+            <h3>Analyst Programmer - Fidelity International</h3>
+            <p>Bengaluru, KA, India (04/2024 – Present)</p>
+            <ul>
+                <li>Developed a web application for NAV calculation for Mutual Funds.</li>
+                <li>Improved code coverage from 30% to 50% using JUnit and Mockito for TDD.</li>
+                <li>Conducted code analysis using SonarQube with CI/CD tools.</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2 class="toggle-btn" onclick="toggleSection('education')">Education ▼</h2>
+        <div id="education" class="toggle-content">
+            <p><strong>Bachelor of Engineering</strong> - Pune Institute of Computer Technology (08/2017 - 07/2021)</p>
+            <p>Electrical and Telecommunication Engineering – 9.14/10</p>
+        </div>
+    </section>
+    <section>
+        <h2 class="toggle-btn" onclick="toggleSection('projects')">Projects ▼</h2>
+        <div id="projects" class="toggle-content">
+            <ul>
+                <li>Real-time chat application using Java and TCP Socket Communication (04/2021).</li>
+                <li>Email sending system using SMTP protocol with data conversion modules (08/2023-10/2023).</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2 class="toggle-btn" onclick="toggleSection('achievements')">Achievements ▼</h2>
+        <div id="achievements" class="toggle-content">
+            <ul>
+                <li>Runner up in TCS internal KICKOFFS Hackathon (2022).</li>
+                <li>Two-time On-the-spot team award from TCS management.</li>
+                <li>Certified SAFe 6 Practitioner for Agile and Lean methodologies.</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Nikita Bodke</p>
+    </footer>
+</body>
+</html>
